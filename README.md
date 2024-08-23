@@ -22,8 +22,8 @@ To run the game, clone the repository and compile the Java files:
 
     git clone https://github.com/yourusername/bulls-and-cows-java.git
     cd bulls-and-cows-java
-    javac BullsAndCows.java
-    java BullsAndCows
+    javac src.BullsAndCows.java
+    java src.BullsAndCows
 
 ### _📚 How to Play_ 
 1. Run the game in your console/terminal. 
