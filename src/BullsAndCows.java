@@ -16,5 +16,15 @@ public class BullsAndCows {
                 cows++;
             }
         }
+
+        if (bulls > 0 && cows > 0) {
+            System.out.println("Grade: " + bulls + " bull(s) and " + cows + " cow(s). The secret code is " + strCode + ".");
+        } else if (bulls > 0 && cows == 0) {
+            System.out.println("Grade: " + bulls + " bull(s). The secret code is " + strCode + ".");
+        } else if (bulls == 0 && cows > 0) {
+            System.out.println("Grade: " + cows + " cow(s). The secret code is " + strCode + ".");
+        } else {
+            System.out.println("Grade: None. The secret code is " + strCode + ".");
+        }
     }
 }
