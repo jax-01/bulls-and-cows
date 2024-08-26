@@ -21,12 +21,19 @@ public class BullsAndCows {
 
         StringBuilder code = new StringBuilder();
 
+
+
         for (int i = 0; i < codeLength; i++) {
             if (code.isEmpty() && stringRandomNumber.charAt(i) == '0') {
                 continue;
             }
+
+            if (code.indexOf(String.valueOf(stringRandomNumber.charAt(i))) == -1) {
+                code.append(stringRandomNumber.charAt(i));
+            }
         }
 
+        System.out.println(code);
 //        Generate a 4-digit code
 //        final short CODE = (short) (Math.random() * (9999 - 1000 + 1) + 1_000);
 //        final String strCode = Short.toString(CODE);
