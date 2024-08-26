@@ -7,7 +7,7 @@ public class BullsAndCows {
 
 
         Scanner sc = new Scanner(System.in);
-        int length = sc.nextInt();
+        int codeLength = sc.nextInt();
 
 
 //        Generate a 4-digit code
