@@ -14,6 +14,8 @@ public class BullsAndCows {
                                 + codeLength + " because there aren't enough unique digits");
         }
 
+        long pseudoRandomNumber = System.nanoTime();
+
 //        Generate a 4-digit code
 //        final short CODE = (short) (Math.random() * (9999 - 1000 + 1) + 1_000);
 //        final String strCode = Short.toString(CODE);
