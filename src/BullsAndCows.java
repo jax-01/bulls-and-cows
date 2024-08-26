@@ -17,6 +17,7 @@ public class BullsAndCows {
         long pseudoRandomNumber = System.nanoTime();
         StringBuilder stringRandomNumber = new StringBuilder();
         stringRandomNumber.append(pseudoRandomNumber);
+        stringRandomNumber = stringRandomNumber.reverse();
 
 //        Generate a 4-digit code
 //        final short CODE = (short) (Math.random() * (9999 - 1000 + 1) + 1_000);
