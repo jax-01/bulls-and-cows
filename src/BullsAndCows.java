@@ -21,7 +21,6 @@ public class BullsAndCows {
             stringRandomNumber.append(pseudoRandomNumber);
             stringRandomNumber = stringRandomNumber.reverse();
             StringBuilder code = new StringBuilder();
-//        int lengthCounter = 0;
             int zeroCounter = 0;
 
             while (zeroCounter < codeLength && stringRandomNumber.charAt(zeroCounter) == '0') {
