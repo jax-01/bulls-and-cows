@@ -23,7 +23,7 @@ public class BullsAndCows {
             stringRandomNumber.append(pseudoRandomNumber).reverse();
             int zeroCounter = 0;
 
-            while (zeroCounter < codeLength && stringRandomNumber.charAt(zeroCounter) == '0') {
+            while (zeroCounter <= codeLength && stringRandomNumber.charAt(zeroCounter) == '0') {
                 zeroCounter++;
             }
 
