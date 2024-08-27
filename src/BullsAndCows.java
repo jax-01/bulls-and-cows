@@ -38,6 +38,10 @@ public class BullsAndCows {
                     break;
                 }
             }
+
+            if (code.length() < codeLength) {
+                code.delete(0, code.length());
+            }
         } while (code.length() < codeLength);
 
         System.out.println(code);
