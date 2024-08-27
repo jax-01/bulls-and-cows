@@ -20,8 +20,7 @@ public class BullsAndCows {
         do {
             long pseudoRandomNumber = System.nanoTime();
             StringBuilder stringRandomNumber = new StringBuilder();
-            stringRandomNumber.append(pseudoRandomNumber);
-            stringRandomNumber = stringRandomNumber.reverse();
+            stringRandomNumber.append(pseudoRandomNumber).reverse();
             int zeroCounter = 0;
 
             while (zeroCounter < codeLength && stringRandomNumber.charAt(zeroCounter) == '0') {
