@@ -19,9 +19,8 @@ public class BullsAndCows {
         StringBuilder stringRandomNumber = new StringBuilder();
         stringRandomNumber.append(pseudoRandomNumber);
         stringRandomNumber = stringRandomNumber.reverse();
-
         StringBuilder code = new StringBuilder();
-
+//        int lengthCounter = 0;
         int zeroCounter = 0;
 
         while (zeroCounter < codeLength && stringRandomNumber.charAt(zeroCounter) == '0') {
@@ -30,6 +29,13 @@ public class BullsAndCows {
 
         if (zeroCounter > 0) {
             stringRandomNumber.delete(0, zeroCounter);
+        }
+
+        for (int i = 0; i < codeLength; i++) {
+            if (code.indexOf(String.valueOf(stringRandomNumber.charAt(i))) == -1) {
+                code.append(stringRandomNumber.charAt(i));
+
+            }
         }
 
 //        for (int i = 0; i < codeLength; i++) {
