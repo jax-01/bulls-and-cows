@@ -15,8 +15,18 @@ public class BullsAndCows {
 
         StringBuilder code = new StringBuilder();
         code.append(getCode(codeLength));
+        System.out.println("Okay, let's start a game!");
+        int turns = 1;
 
-        System.out.println("The random secret number is " + code);
+        StringBuilder userGuess = new StringBuilder();
+
+        do {
+
+            userGuess.append(sc.next());
+
+
+        } while (!userGuess.toString().equals(code.toString()));
+
 //        Generate a 4-digit code
 //        final short CODE = (short) (Math.random() * (9999 - 1000 + 1) + 1_000);
 //        final String strCode = Short.toString(CODE);
