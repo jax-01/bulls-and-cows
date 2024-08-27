@@ -17,6 +17,7 @@ public class BullsAndCows {
         code.append(getCode(codeLength));
         System.out.println("Okay, let's start a game!");
         int turns = 1;
+        int bulls = 0, cows = 0;
 
         StringBuilder userGuess = new StringBuilder();
 
@@ -24,7 +25,14 @@ public class BullsAndCows {
             System.out.println("Turn " + turns + ":");
             userGuess.append(sc.next());
 
-
+            for (int i = 0; i < code.length(); i++) {
+                if (userGuess.charAt(i) == code.charAt(i)) {
+                    bulls++;
+                } else if (userGuess.charAt(i) != code.charAt(i)
+                        && code.toString().contains(String.valueOf(userGuess.charAt(i)))) {
+                    cows++;
+                }
+            }
         } while (!userGuess.toString().equals(code.toString()));
 
 //        Generate a 4-digit code
