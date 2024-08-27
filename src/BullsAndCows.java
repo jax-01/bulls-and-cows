@@ -35,7 +35,6 @@ public class BullsAndCows {
             for (int i = 0; i < codeLength; i++) {
                 if (code.indexOf(String.valueOf(stringRandomNumber.charAt(i))) == -1) {
                     code.append(stringRandomNumber.charAt(i));
-
                 }
             }
         } while (code.length() < codeLength);
