@@ -4,8 +4,6 @@ import java.util.Scanner;
 
 public class BullsAndCows {
     public static void main(String[] args) {
-
-
         Scanner sc = new Scanner(System.in);
         int codeLength = sc.nextInt();
 
@@ -44,7 +42,7 @@ public class BullsAndCows {
             }
         } while (code.length() < codeLength);
 
-        System.out.println(code);
+        System.out.println("The random secret number is " + code);
 //        Generate a 4-digit code
 //        final short CODE = (short) (Math.random() * (9999 - 1000 + 1) + 1_000);
 //        final String strCode = Short.toString(CODE);
