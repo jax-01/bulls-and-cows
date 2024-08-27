@@ -12,6 +12,7 @@ public class BullsAndCows {
         if (codeLength > 10) {
             System.out.println("Error: can't generate a secret number with a length of "
                                 + codeLength + " because there aren't enough unique digits");
+            return;
         }
 
         long pseudoRandomNumber = System.nanoTime();
