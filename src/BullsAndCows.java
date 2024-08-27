@@ -15,28 +15,30 @@ public class BullsAndCows {
             return;
         }
 
-        long pseudoRandomNumber = System.nanoTime();
-        StringBuilder stringRandomNumber = new StringBuilder();
-        stringRandomNumber.append(pseudoRandomNumber);
-        stringRandomNumber = stringRandomNumber.reverse();
-        StringBuilder code = new StringBuilder();
+        do {
+            long pseudoRandomNumber = System.nanoTime();
+            StringBuilder stringRandomNumber = new StringBuilder();
+            stringRandomNumber.append(pseudoRandomNumber);
+            stringRandomNumber = stringRandomNumber.reverse();
+            StringBuilder code = new StringBuilder();
 //        int lengthCounter = 0;
-        int zeroCounter = 0;
+            int zeroCounter = 0;
 
-        while (zeroCounter < codeLength && stringRandomNumber.charAt(zeroCounter) == '0') {
-            zeroCounter++;
-        }
-
-        if (zeroCounter > 0) {
-            stringRandomNumber.delete(0, zeroCounter);
-        }
-
-        for (int i = 0; i < codeLength; i++) {
-            if (code.indexOf(String.valueOf(stringRandomNumber.charAt(i))) == -1) {
-                code.append(stringRandomNumber.charAt(i));
-
+            while (zeroCounter < codeLength && stringRandomNumber.charAt(zeroCounter) == '0') {
+                zeroCounter++;
             }
-        }
+
+            if (zeroCounter > 0) {
+                stringRandomNumber.delete(0, zeroCounter);
+            }
+
+            for (int i = 0; i < codeLength; i++) {
+                if (code.indexOf(String.valueOf(stringRandomNumber.charAt(i))) == -1) {
+                    code.append(stringRandomNumber.charAt(i));
+
+                }
+            }
+        } while (code.length() < codeLength);
 
 //        for (int i = 0; i < codeLength; i++) {
 //            if (code.isEmpty() && stringRandomNumber.charAt(i) == '0') {
