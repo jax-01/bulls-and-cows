@@ -21,7 +21,7 @@ public class BullsAndCows {
         StringBuilder userGuess = new StringBuilder();
 
         do {
-
+            System.out.println("Turn " + turns + ":");
             userGuess.append(sc.next());
 
 
