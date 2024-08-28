@@ -46,40 +46,40 @@ public class BullsAndCows {
             userGuess.delete(0, userGuess.length());
             turns++;
         } while (bulls != codeLength);
-
-//        Generate a 4-digit code
-//        final short CODE = (short) (Math.random() * (9999 - 1000 + 1) + 1_000);
     }
 
-    public static StringBuilder getCode(int codeLength) {
-        StringBuilder code = new StringBuilder();
-        do {
-            long pseudoRandomNumber = System.nanoTime();
-            StringBuilder stringRandomNumber = new StringBuilder();
-            stringRandomNumber.append(pseudoRandomNumber).reverse();
-            int zeroCounter = 0;
+    public static long getCode(int codeLength) {
+//        StringBuilder code = new StringBuilder();
 
-            while (zeroCounter <= codeLength && stringRandomNumber.charAt(zeroCounter) == '0') {
-                zeroCounter++;
-            }
-
-            if (zeroCounter > 0) {
-                stringRandomNumber.delete(0, zeroCounter);
-            }
-
-            for (int i = 0; i < codeLength; i++) {
-                if (code.indexOf(String.valueOf(stringRandomNumber.charAt(i))) == -1) {
-                    code.append(stringRandomNumber.charAt(i));
-                } else {
-                    break;
-                }
-            }
-
-            if (code.length() < codeLength) {
-                code.delete(0, code.length());
-            }
-        } while (code.length() < codeLength);
-
-        return code;
+        return (long) (Math.random() * ((Math.pow(10, codeLength) - 1) - (Math.pow(10, codeLength - 1)) + 1)
+                                                    + Math.pow(10, codeLength - 1));
+//        Generate a 4-digit code
+//        final short CODE = (short) (Math.random() * (9999 - 1000 + 1) + 1_000);
+//        do {
+//            long pseudoRandomNumber = System.nanoTime();
+//            StringBuilder stringRandomNumber = new StringBuilder();
+//            stringRandomNumber.append(randomNumber).reverse();
+//            int zeroCounter = 0;
+//
+//            while (zeroCounter <= codeLength && stringRandomNumber.charAt(zeroCounter) == '0') {
+//                zeroCounter++;
+//            }
+//
+//            if (zeroCounter > 0) {
+//                stringRandomNumber.delete(0, zeroCounter);
+//            }
+//
+//            for (int i = 0; i < codeLength; i++) {
+//                if (code.indexOf(String.valueOf(stringRandomNumber.charAt(i))) == -1) {
+//                    code.append(stringRandomNumber.charAt(i));
+//                } else {
+//                    break;
+//                }
+//            }
+//
+//            if (code.length() < codeLength) {
+//                code.delete(0, code.length());
+//            }
+//        } while (code.length() < codeLength);
     }
 }
