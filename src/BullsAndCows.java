@@ -33,7 +33,19 @@ public class BullsAndCows {
                     cows++;
                 }
             }
-        } while (!userGuess.toString().equals(code.toString()));
+
+            if (bulls != codeLength) {
+                System.out.println("Grade: " + bulls + " bull(s) and " + cows + " cow");
+                bulls = 0;
+                cows = 0;
+            } else {
+                System.out.println("Grade: " + bulls + " bulls");
+                System.out.println("Congratulations! You guessed the secret code.");
+                return;
+            }
+            userGuess.delete(0, userGuess.length());
+            turns++;
+        } while (bulls != codeLength);
 
 //        Generate a 4-digit code
 //        final short CODE = (short) (Math.random() * (9999 - 1000 + 1) + 1_000);
