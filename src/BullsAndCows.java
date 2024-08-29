@@ -18,6 +18,11 @@ public class BullsAndCows {
         System.out.println("Input the number of possible symbols in the code:");
         int possibleSymbols = sc.nextInt();
 
+        if (possibleSymbols > 36) {
+            System.out.println("Error: " + possibleSymbols + " exceeds the number of possible symbols in the code");
+            return;
+        }
+
         if (codeLength > possibleSymbols) {
             System.out.println("Code length shouldn't be greater than number of symbols");
             return;
