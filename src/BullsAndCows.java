@@ -50,6 +50,7 @@ public class BullsAndCows {
 
     public static long getCode(int codeLength) {
 //        StringBuilder code = new StringBuilder();
+        String symbols = "1234567890abcdefghijklmnopqrstuvwxyz";
 
         return (long) (Math.random() * ((Math.pow(10, codeLength) - 1) - (Math.pow(10, codeLength - 1)) + 1)
                                                     + Math.pow(10, codeLength - 1));
