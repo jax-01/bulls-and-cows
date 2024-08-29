@@ -29,7 +29,7 @@ public class BullsAndCows {
         }
 
         StringBuilder code = new StringBuilder();
-        code.append(getCode(codeLength));
+        code.append(getCode(codeLength, possibleSymbols));
         System.out.println("Okay, let's start a game!");
         int turns = 1;
         int bulls = 0, cows = 0;
@@ -63,7 +63,7 @@ public class BullsAndCows {
         } while (bulls != codeLength);
     }
 
-    public static long getCode(int codeLength) {
+    public static long getCode(int codeLength, int possibleSymbols) {
 //        StringBuilder code = new StringBuilder();
         String symbols = "1234567890abcdefghijklmnopqrstuvwxyz";
 
