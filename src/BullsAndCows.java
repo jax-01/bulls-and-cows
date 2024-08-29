@@ -5,6 +5,8 @@ import java.util.Scanner;
 public class BullsAndCows {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
+
+        System.out.println("Input the length of the secret code");
         int codeLength = sc.nextInt();
 
         if (codeLength > 36) {
@@ -13,6 +15,7 @@ public class BullsAndCows {
             return;
         }
 
+        System.out.println("Input the number of possible symbols in the code:");
         int possibleSymbols = sc.nextInt();
 
         StringBuilder code = new StringBuilder();
