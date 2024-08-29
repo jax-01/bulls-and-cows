@@ -18,6 +18,11 @@ public class BullsAndCows {
         System.out.println("Input the number of possible symbols in the code:");
         int possibleSymbols = sc.nextInt();
 
+        if (codeLength > possibleSymbols) {
+            System.out.println("Code length shouldn't be greater than number of symbols");
+            return;
+        }
+
         StringBuilder code = new StringBuilder();
         code.append(getCode(codeLength));
         System.out.println("Okay, let's start a game!");
