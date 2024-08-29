@@ -13,6 +13,8 @@ public class BullsAndCows {
             return;
         }
 
+        int possibleSymbols = sc.nextInt();
+
         StringBuilder code = new StringBuilder();
         code.append(getCode(codeLength));
         System.out.println("Okay, let's start a game!");
