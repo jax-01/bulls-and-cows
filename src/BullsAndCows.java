@@ -65,7 +65,7 @@ public class BullsAndCows {
 
     public static StringBuilder getCode(int codeLength, int possibleSymbols) {
         StringBuilder code = new StringBuilder();
-        String symbols = "1234567890abcdefghijklmnopqrstuvwxyz";
+        String symbols = "0123456789abcdefghijklmnopqrstuvwxyz";
 
         do {
             for (int i = 0; i < codeLength; i++) {
