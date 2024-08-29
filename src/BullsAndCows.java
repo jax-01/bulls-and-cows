@@ -83,6 +83,15 @@ public class BullsAndCows {
             }
         } while (code.length() < codeLength);
 
+        System.out.print("The secret is prepared: ");
+        for (int i = 0; i < codeLength; i++) {
+            System.out.print("*");
+        }
+
+        System.out.println(possibleSymbols == 10 ? " (0-9)" :
+                        possibleSymbols < 10 ? " (0-" + (possibleSymbols - 1) + ")" :
+                        possibleSymbols == 11 ? " (0-9, a)" : " (0-9, a-" + symbols.charAt(possibleSymbols - 1) + ")");
+
         return code;
 
 //        Generate a 4-digit code
