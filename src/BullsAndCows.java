@@ -63,12 +63,28 @@ public class BullsAndCows {
         } while (bulls != codeLength);
     }
 
-    public static long getCode(int codeLength, int possibleSymbols) {
-//        StringBuilder code = new StringBuilder();
+    public static StringBuilder getCode(int codeLength, int possibleSymbols) {
+        StringBuilder code = new StringBuilder();
         String symbols = "1234567890abcdefghijklmnopqrstuvwxyz";
 
-        return (long) (Math.random() * ((Math.pow(10, codeLength) - 1) - (Math.pow(10, codeLength - 1)) + 1)
-                                                    + Math.pow(10, codeLength - 1));
+        do {
+            for (int i = 0; i < codeLength; i++) {
+                int index = (int) (Math.random() * ((possibleSymbols - 1) + 1));
+
+                if (code.indexOf(String.valueOf(symbols.charAt(index))) == - 1 ) {
+                    code.append(symbols.charAt(index));
+                } else {
+                    break;
+                }
+            }
+
+            if (code.length() < codeLength) {
+                code.delete(0, code.length());
+            }
+        } while (code.length() < codeLength);
+
+        return code;
+
 //        Generate a 4-digit code
 //        final short CODE = (short) (Math.random() * (9999 - 1000 + 1) + 1_000);
 //        do {
