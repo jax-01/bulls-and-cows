@@ -93,34 +93,5 @@ public class BullsAndCows {
                         possibleSymbols == 11 ? " (0-9, a)" : " (0-9, a-" + symbols.charAt(possibleSymbols - 1) + ")");
 
         return code;
-
-//        Generate a 4-digit code
-//        final short CODE = (short) (Math.random() * (9999 - 1000 + 1) + 1_000);
-//        do {
-//            long pseudoRandomNumber = System.nanoTime();
-//            StringBuilder stringRandomNumber = new StringBuilder();
-//            stringRandomNumber.append(randomNumber).reverse();
-//            int zeroCounter = 0;
-//
-//            while (zeroCounter <= codeLength && stringRandomNumber.charAt(zeroCounter) == '0') {
-//                zeroCounter++;
-//            }
-//
-//            if (zeroCounter > 0) {
-//                stringRandomNumber.delete(0, zeroCounter);
-//            }
-//
-//            for (int i = 0; i < codeLength; i++) {
-//                if (code.indexOf(String.valueOf(stringRandomNumber.charAt(i))) == -1) {
-//                    code.append(stringRandomNumber.charAt(i));
-//                } else {
-//                    break;
-//                }
-//            }
-//
-//            if (code.length() < codeLength) {
-//                code.delete(0, code.length());
-//            }
-//        } while (code.length() < codeLength);
     }
 }
