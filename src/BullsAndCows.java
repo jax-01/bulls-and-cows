@@ -24,7 +24,8 @@ public class BullsAndCows {
         }
 
         if (codeLength > possibleSymbols) {
-            System.out.println("Code length shouldn't be greater than number of symbols");
+            System.out.println("Error: it's not possible to generate a code with a length of "
+                                + codeLength + " with " + possibleSymbols + " unique symbols.");
             return;
         }
 
