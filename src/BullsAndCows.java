@@ -9,6 +9,11 @@ public class BullsAndCows {
         System.out.println("Input the length of the secret code");
         int codeLength = sc.nextInt();
 
+        if (codeLength < 1) {
+            System.out.println("Error: code length must be greater than 0");
+            return;
+        }
+
         if (codeLength > 36) {
             System.out.println("Error: can't generate a secret number with a length of "
                                 + codeLength + " because there aren't enough unique digits");
