@@ -7,12 +7,14 @@ public class BullsAndCows {
         Scanner sc = new Scanner(System.in);
 
         System.out.println("Input the length of the secret code");
-        int codeLength = 0;
+        String tempCodeLength = "";
+        int codeLength;
 
-        if (sc.hasNextInt()) {
-            codeLength = sc.nextInt();
-        } else {
-            System.out.println(sc.nextLine() + " isn't a valid number");
+        try {
+            tempCodeLength = sc.nextLine();
+            codeLength = Integer.parseInt(tempCodeLength);
+        } catch (NumberFormatException e) {
+            System.out.println("\"" + tempCodeLength + "\" is not a valid input");
             return;
         }
 
