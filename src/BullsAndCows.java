@@ -30,7 +30,16 @@ public class BullsAndCows {
         }
 
         System.out.println("Input the number of possible symbols in the code:");
-        int possibleSymbols = sc.nextInt();
+        String tempPossibleSymbols = "";
+        int possibleSymbols;
+
+        try {
+            tempPossibleSymbols = sc.nextLine();
+            possibleSymbols = Integer.parseInt(tempPossibleSymbols);
+        } catch (NumberFormatException e) {
+            System.out.println("\"" + tempPossibleSymbols + "\" is not a valid input");
+            return;
+        }
 
         if (possibleSymbols > 36) {
             System.out.println("Error: maximum number of possible symbols in the code is 36 (0-9, a-z).");
