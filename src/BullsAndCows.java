@@ -7,7 +7,14 @@ public class BullsAndCows {
         Scanner sc = new Scanner(System.in);
 
         System.out.println("Input the length of the secret code");
-        int codeLength = sc.nextInt();
+        int codeLength = 0;
+
+        if (sc.hasNextInt()) {
+            codeLength = sc.nextInt();
+        } else {
+            System.out.println(sc.nextLine() + " isn't a valid number");
+            return;
+        }
 
         if (codeLength < 1) {
             System.out.println("Error: code length must be greater than 0");
