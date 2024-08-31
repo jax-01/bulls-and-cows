@@ -19,7 +19,7 @@ public class BullsAndCows {
         int possibleSymbols = sc.nextInt();
 
         if (possibleSymbols > 36) {
-            System.out.println("Error: " + possibleSymbols + " exceeds the number of possible symbols in the code");
+            System.out.println("Error: maximum number of possible symbols in the code is 36 (0-9, a-z).");
             return;
         }
 
